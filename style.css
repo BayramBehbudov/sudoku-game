@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(241, 227, 206);
+}
+
+#board {
+    display: flex;
+    min-width: 345px;
+    max-width: 345px;
+    gap: 15px;
+    height: fit-content;
+    flex-wrap: wrap;
+    position: relative;
+
+
+
+    input {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px black solid;
+        padding: 1px;
+        box-shadow: 10px 10px 20px rgba(57, 56, 80, 0.5);
+        transition: background-color 0.5s ease;
+        border-radius: 5px;
+        font-weight: lighter;
+    }
+
+    input:focus {
+        background-color: rgba(250, 152, 66, 0.968);
+    }
+
+}
+
+.redback {
+    background-color: red;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+.line {
+    border: 1px solid black;
+    background-color: rgb(197, 136, 136);
+    position: absolute;
+}
+
+.vertical {
+    width: 1px;
+    height: 100%;
+}
+
+.horizontal {
+    width: 100%;
+    height: 1px;
+}
+
+.line:nth-child(1) {
+    left: calc(33.333% - 7px);
+    top: 0;
+    height: 100%;
+}
+
+.line:nth-child(2) {
+    left: calc(66.666% - 7px);
+    top: 0;
+    height: 100%;
+}
+
+.line:nth-child(3) {
+    left: -5px;
+    top: calc(33.333% - 4px);
+    width: 100%;
+}
+
+.line:nth-child(4) {
+    left: -5px;
+    top: calc(66.666% - 0.1px);
+    width: 100%;
+}
